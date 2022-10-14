@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script displaying to infinity and beyond indefintely with a sleep 2 between each iteration
+# I am invinscible when receiving a SIGTERM signal
+trap "echo 'I am invincible!!!'" SIGTERM
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

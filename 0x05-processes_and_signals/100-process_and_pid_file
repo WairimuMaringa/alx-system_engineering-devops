@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Script with multiple conditions
+# Create the file /var/run/myscript.pid
+echo $BASHPID > /var/run/myscript.pid
+# Display Y U no love me when receiving a SIGINT signal
+trap "echo 'Y U no love me?!'" SIGINT
+# Delete the file /var/run/myscript.pid
+trap "rm-f /var/run/myscript.pid; exit" SIGQUIT
+# Display i haet the kill command when recieiving a SIGTERM signal
+trap "echo 'I hate the kill command'; rm -f /var/run/myscript.pid; exit" SIGTERM
+# Display to infinity and beyond indefinitely
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

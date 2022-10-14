@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script displaying lines with the word bash
+# Third line must be shellcheck disable=SC2009
+ps aux --forest | grep bash

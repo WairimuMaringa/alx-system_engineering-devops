@@ -6,7 +6,7 @@ sudo apt-get -y update
 ### Install Nginx
 sudo apt-get -y install nginx
 ### Add permissions
-sudo chown -R ubunt /var/www
+sudo chown -R ubuntu /var/www
 ### Change the default content of index.html for Nginx
 echo "Hello World" > /var/www/html/index.nginx-debian.html
 ### Start ndinx

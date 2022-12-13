@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+## Script that installs Nginx server
+
+### Update the operating system packages
+sudo apt-get -y update
+### Install Nginx
+sudo apt-get -y install nginx
+### Add permissions
+sudo chown -R ubunt /var/www
+### Change the default content of index.html for Nginx
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+### Start ndinx
+sudo service nginx start

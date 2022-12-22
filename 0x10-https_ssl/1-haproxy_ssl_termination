@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Create a certificate to configure HAproxy
+
+SDWWW=www.maringa.tech
+echo $SDWWW
+sudo snap install --classic certbot
+sudo service haproxy stop
+sudo certbot certonly --dry-run --standalone -d $SDWWW --non-interactive --agree-tos --email makena96wairimu@gmail.com
+sudo certbot certonly --standalone -d $SDWWW --non-interactive --agree-tos --email makena96wairimu@gmail.com
+sudo cat /etc/letsencrypt/live/$SDWWW/fullchain.pem /etc/letsencrypt/live/$SDWWW/privkey.pem | sudo tee /etc/letsencrypt/live/$SDWWW/haproxy.pem

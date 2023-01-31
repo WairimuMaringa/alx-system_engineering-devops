@@ -1,1 +1,1 @@
-This contains projects on shell basics
+web stack debugging

@@ -1,1 +1,1 @@
-web stack debugging
+system engineering devops projects
